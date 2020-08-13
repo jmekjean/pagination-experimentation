@@ -29,10 +29,7 @@ class Pagination extends Component {
     this.totalRecords = typeof totalRecords === "number" ? totalRecords : 0;
 
     // pageNeighbours can be: 0, 1 or 2
-    this.pageNeighbours =
-      typeof pageNeighbours === "number"
-        ? Math.max(0, Math.min(pageNeighbours, 2))
-        : 0;
+    this.pageNeighbours = 1;
 
     this.totalPages = Math.ceil(this.totalRecords / this.pageLimit);
 
